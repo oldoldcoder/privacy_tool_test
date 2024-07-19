@@ -6,12 +6,12 @@ def generate_data(rows, dimensions):
 
 def format_data(rows, dimensions, data):
     header = f"{rows} {dimensions}"
-    formatted_data = "\n".join(["   ".join(map(str, row)) for row in data])
+    formatted_data = "\n".join([" ".join(map(str, row)) for row in data])
     return f"{header}\n{formatted_data}"
 
 def main():
     # 您可以在此处指定行数和维度
-    rows = 10000
+    rows = 1000000
     dimensions = 64
 
     data = generate_data(rows, dimensions)

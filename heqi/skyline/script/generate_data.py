@@ -12,7 +12,7 @@ def format_data(rows, dimensions, data):
 def main():
     # 您可以在此处指定行数和维度
     rows = 10000
-    dimensions = 3
+    dimensions = 64
 
     data = generate_data(rows, dimensions)
     formatted_data = format_data(rows, dimensions, data)

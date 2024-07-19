@@ -28,8 +28,8 @@ def main(filename, x_rows, y_rows, dimensions, k):
 if __name__ == "__main__":
     # 可以在此处指定文件名，x数据集的行数，y数据集的行数，维度，和k值
     output_file = "../data/data.txt"
-    x_rows = 10000
-    y_rows = 10000
+    x_rows = 9000
+    y_rows = 1000
     dimensions = 64
     k = 100
 
