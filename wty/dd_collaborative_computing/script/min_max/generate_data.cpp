@@ -11,7 +11,7 @@ using namespace std;
 // 往文件中写入1万条数据，每个数据都是1-1000的随机数
 void createData() {
     // 定义生成数据文件的路径
-    const char* fileString = "C:\\Users\\uu\\Desktop\\privacy_tool_test\\wty\\dd_collaborative_computing\\data\\average\\data.txt";
+    const char* fileString = "C:\\Users\\uu\\Desktop\\privacy_tool_test\\wty\\dd_collaborative_computing\\data\\data.txt";
     ofstream outfile(fileString);
 
     if (!outfile.is_open()) {
@@ -25,9 +25,9 @@ void createData() {
     mt19937 gen(rd());
     uniform_int_distribution<> dis(1, 1000);
 
-    for (int i = 0; i < 10000; ++i) { // 写入数据
+    for (int i = 0; i < 10; ++i) { // 写入数据
         if (i != 0) {
-            outfile << " ";
+            outfile << endl;
         }
         outfile << dis(gen);
     }

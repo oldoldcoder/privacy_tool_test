@@ -28,7 +28,7 @@ void createData() {
     // 写入第一行的一个数，设置分享数为6
     outfile << "6" << endl;
 
-    for (int j = 0; j < 10000; ++j) {
+    for (int j = 0; j < 20; ++j) {
         if (j != 0) {
             outfile << " ";
         }

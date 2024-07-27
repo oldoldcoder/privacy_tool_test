@@ -11,7 +11,7 @@ using namespace std;
 
 void createData() {
     // 定义生成数据文件的路径
-    const char* fileString1 = "C:\\Users\\uu\\Desktop\\privacy_tool_test\\wty\\dd_ReverseSQ\\data\\data1.txt";
+    const char* fileString1 = "C:\\Users\\uu\\Desktop\\privacy_tool_test\\wty\\dd_ReverseSQ\\data1.txt";
     ofstream outfile(fileString1);
 
     if (!outfile.is_open()) {
@@ -25,8 +25,8 @@ void createData() {
     mt19937 gen(rd());
     uniform_int_distribution<> dis(1, 1000);
 
-    for (int i = 0; i < 100; ++i) { // 写入数据
-        for (int j = 0; j < 100; ++j) {
+    for (int i = 0; i < 4; ++i) { // 写入数据
+        for (int j = 0; j < 1000000; ++j) {
             if (j != 0) {
                 outfile << " ";
             }
@@ -43,7 +43,7 @@ void createData() {
 
 void createData2() {
     // 定义生成数据文件的路径
-    const char* fileString1 = "C:\\Users\\uu\\Desktop\\privacy_tool_test\\wty\\dd_ReverseSQ\\data\\data2.txt";
+    const char* fileString1 = "C:\\Users\\uu\\Desktop\\privacy_tool_test\\wty\\dd_ReverseSQ\\data2.txt";
     ofstream outfile(fileString1);
 
     if (!outfile.is_open()) {
@@ -57,8 +57,8 @@ void createData2() {
     mt19937 gen(rd());
     uniform_int_distribution<> dis(1, 1000);
 
-    for (int i = 0; i < 100; ++i) { // 写入数据
-        for (int j = 0; j < 100; ++j) {
+    for (int i = 0; i < 4; ++i) { // 写入数据
+        for (int j = 0; j < 10; ++j) {
             if (j != 0) {
                 outfile << " ";
             }

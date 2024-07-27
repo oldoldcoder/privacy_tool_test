@@ -25,14 +25,18 @@ void createData() {
     mt19937 gen(rd());
     uniform_int_distribution<> dis(1, 1000);
 
-    for (int i = 0; i < 2; ++i) { // 写入数据
-        for (int j = 0; j < 1000000; ++j) {
-            if (j != 0) {
-                outfile << " ";
-            }
-            outfile << dis(gen);
+    for (int i = 0; i < 10; ++i) { // 写入数据
+        if (i != 0) {
+            outfile << " ";
         }
-        outfile << "\n";
+        outfile << dis(gen);
+    }
+    outfile << endl;
+    for (int i = 0; i < 10; ++i) { // 写入数据
+        if (i != 0) {
+            outfile << " ";
+        }
+        outfile << dis(gen);
     }
 
     outfile.close();

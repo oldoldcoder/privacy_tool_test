@@ -11,7 +11,7 @@ using namespace std;
 
 void createData() {
     // 定义生成数据文件的路径
-    const char* fileString1 = "C:\\Users\\uu\\Desktop\\privacy_tool_test\\wty\\dd_ReverseSQ\\data\\query.txt";
+    const char* fileString1 = "C:\\Users\\uu\\Desktop\\privacy_tool_test\\wty\\dd_ReverseSQ\\query.txt";
     ofstream outfile(fileString1);
 
     if (!outfile.is_open()) {
@@ -26,10 +26,10 @@ void createData() {
     uniform_int_distribution<> dis(1, 1000);
 
 
-    // 假设k = 6
-    outfile << "6" << "\n";
+    // 假设k = 5
+    outfile << "5" << "\n";
 
-    for (int j = 0; j < 100; ++j) {
+    for (int j = 0; j < 4; ++j) {
         if (j != 0) {
             outfile << " ";
         }
