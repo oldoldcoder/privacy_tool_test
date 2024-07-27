@@ -21,7 +21,7 @@ def write_data_to_file(data, filename):
 
 if __name__ == "__main__":
     # Generate 200 lines of data as requested
-    data = generate_data(10000,dim=6)
+    data = generate_data(1000000, dim=6)
 
     # Write the generated data to a file
     write_data_to_file(data, '../data/data.txt')

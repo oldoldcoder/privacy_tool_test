@@ -7,11 +7,12 @@ def generate_random_string(length):
 
 def generate_test_data(num_owners):
     """生成测试数据"""
-    data = f"{num_owners}\n**\n"
+    data = f"{num_owners}\n"
 
     for owner_id in range(1, num_owners + 1):
+        data += "**\n"
         data += f"{owner_id}\n"
-        num_files_per_owner = random.randint(500, 1000)
+        num_files_per_owner = random.randint(5000, 10000)
         for file_id in range(1, num_files_per_owner + 1):
             file_id_str = str(file_id)
             random_int = random.randint(1, 10)
@@ -23,14 +24,14 @@ def generate_test_data(num_owners):
     return data
 
 # 设置参数
-num_owners = 20  # 数据拥有者数量
+num_owners = 200  # 数据拥有者数量
 
 if __name__ == "__main__":
     # 生成测试数据
     test_data = generate_test_data(num_owners)
 
     # 将生成的数据写入文件
-    with open("../data/data.txt", "w", encoding="utf-8") as file:
+    with open("../data/data.txt", "w", encoding="utf-8", newline='\n') as file:
         file.write(test_data)
 
     print("数据已写入 test_data.txt 文件")
